@@ -5,7 +5,7 @@
   "author": "yuukit <yuma.kitamura@ponos.co.jp>",
   "private": true,
   "scripts": {
-    "build": "rm -rf dist && webpack --mode production && cpx src/appsscript.json dist",
+    "build": "rm -rf dist && NODE_OPTIONS='--openssl-legacy-provider' webpack --mode production && cpx src/appsscript.json dist",
     "deploy": "npm run build && clasp push --force",
     "tsc": "tsc --noEmit"
   },
